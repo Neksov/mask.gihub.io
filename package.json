@@ -1,5 +1,5 @@
 {
-  "name": "saytspb.github.io",
+  "name": "mask.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Neksov/saytspb.github.io.git"
+    "url": "git+https://github.com/Neksov/mask.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Neksov/saytspb.github.io/issues"
+    "url": "https://github.com/Neksov/mask.github.io/issues"
   },
   "browserslist": [
     "defaults",
@@ -21,7 +21,7 @@
     "not IE_Mob 11",
     "maintained node versions"
   ],
-  "homepage": "https://github.com/Neksov/saytspb.github.io#readme",
+  "homepage": "https://github.com/Neksov/mask.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
