@@ -1,13 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <p>Привет</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/swiper.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.min.css" media="all" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <title>Защитные маски</title>
+</head>
+
+<body>
+  <main>
+    <div class="mask">
+      <img src="img/mask.jpg" alt="Маска" class="mask__images" />
+
+      <div class="container">
+        <div class="box">
+          <div class="menu box__menu">
+            <a href="index.html" class="logo wow fadeInLeft" data-wow-delay="0.4s"><img src="img/medicalmask.png"
+                class="logo box__menu-logo" alt="Logo" />
+              MedMaskSPB</a>
+            <nav class="nav menu__nav">
+              <a href="#hero" class="nav__item" data-toggle="modalFoto">Фото</a>
+              <a href="#price" class="nav__item">Цены</a>
+              <a href="#footer" class="nav__item" data-toggle="modalAddress">Контакты</a>
+            </nav>
+            <!-- /.menu nav__menu -->
+            <div class="contacts menu__contacts">
+              <a href="tel:+78129921030" class="phone contacts__phone">+7(911)-983-31-12</a>
+              <button onclick="ym('61621897', 'reachGoal', 'button'); return true;"
+                class="btn contacts__btn btn--primary wow bounce" data-toggle="modal">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="price">
+      <div class="container">
+        <div class="price__half">
+          <div class="price__info">
+            <h2 class="price-title" id="price">Заказать защитные маски</h2>
+            <form action="sendPrice.php" method="POST" class="form price__form">
+              <div class="input-group price__input-group">
+                <label for="price-user-name" class="label form__label price__label">ИМЯ</label>
+                <input type="text" autocomplete="off" name="userName" class="input form__input price__input"
+                  id="price-user-name" placeholder="Иван Иванов" maxlength="15" />
+              </div>
+              <div class="input-group price__input-group">
+                <label for="price-user-email" class="label form__label price__label">E-MAIL</label>
+                <input type="email" autocomplete="off" name="userEmail" class="input form__input price__input"
+                  id="price-user-email" placeholder="ivanov@gmail.com" maxlength="30" />
+              </div>
+
+              <div class="input-group price__input-group">
+                <label for="price-user-phone" class="label form__label price__label">ТЕЛЕФОН</label>
+                <input type="tel" autocomplete="off" name="userPhone" class="input form__input price__input"
+                  id="price-user-phone" placeholder="+7 999 888-88-88" />
+              </div>
+
+              <div class="input-group price__input-group">
+                <label for="price-user-message" class="label form__label price__label">СООБЩЕНИЕ</label>
+                <input type="text" autocomplete="off" name="userMessage" class="input form__input price__input"
+                  id="price-user-message" placeholder="Введите Ваше сообщение" maxlength="30" />
+              </div>
+
+              <button onclick="ym('61621897', 'reachGoal', 'button'); return true;" class="btn btn--primary price__btn">
+                Узнать стоимость
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+
+      <form action="sendModal.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <input type="text" name="userName" class="input form__input modal__input" id="modal-user-name"
+            placeholder="Ваше имя " maxlength="15" />
+        </div>
+        <div class="input-group modal__input-group">
+          <input type="tel" name="userPhone" class="input form__input modal__input" id="modal-user-phone"
+            placeholder="Ваш номер телефона " />
+        </div>
+        <button class="btn btn--primary modal__btn">
+          Отправить
+        </button>
+        <!-- /.button button-rimary modal__button -->
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+  </div>
+
+
+  <div class="modalFoto">
+    <div class="modalFoto__dialog">
+      <button class="modalFoto__close"></button>
+      <img src="img/mask1.jpg" alt="" class="modalFoto__foto">
+      <!-- /.form modal__form -->
+    </div>
+  </div>
+
+
+  <div class="modalAddress">
+    <div class="modalAddress__dialog">
+      <button class="modalAddress__close"></button>
+      <div class="modalAddress__title">
+        <h3>город Санкт-Петербург</h3>
+        <span>ул. Белышева 5/6</span>
+      </div>
+
+      <!-- /.form modal__form -->
+    </div>
+  </div>
+
+
+  <!-- Модальне окно благодарности -->
+  <div class="modalSend">
+    <div class="modalSend__dialog">
+      <div class="modalSend__content">
+        <h3 class="modalSend__header">
+          Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
+          минут. <br />
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://5e7c8b12452c471f8d34e456--reverent-yonath-cad9c2.netlify.com/js/jquery.validate.min.js"></script>
+  <script src="https://5e7c8b12452c471f8d34e456--reverent-yonath-cad9c2.netlify.com/js/jquery.mask.min.js"></script>
+  <script src="https://5e7c8b12452c471f8d34e456--reverent-yonath-cad9c2.netlify.com/js/wow.min.js"></script>
+</body>
+
 </html>
