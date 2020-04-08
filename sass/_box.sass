@@ -1,14 +1,18 @@
 .box
-  padding-top: 30px
+  padding-top: 10px
   &__menu
     display: flex
     justify-content: space-between
     align-items: center
-    background-color: rgba(158, 177, 190, 0.3)
+    background-color: rgba(250, 250, 250, 0.5)
     height: 50px
     &-logo
       width: 30px
       height: 30px
+      border-radius: 10px
+      margin-right: 20px
+      margin-left: 20px
+
 .logo
   display: flex
   justify-content: center
@@ -43,25 +47,43 @@
         width: 80%
 .phone
   color: #000000
-  text-decoration: none
   font-size: 1.125rem
   font-weight: 700
   line-height: 2.333rem
   cursor: pointer
-  
+  &:hover
+    color: $light
+
+
 .contacts
+  display: flex
+  align-items: center
   &__phone
     margin-right: 2.8rem
+   
+  &__img
+    width: 32px
+    height: 32px
+    margin-right: 10px
+  &__img2
+    width: 36px
+    height: 36px
+    margin-right: 10px
+
 .btn
   padding: 0.8rem 1.99rem
   border: none
   border-radius: 30px
   font-size: 1rem
   font-weight: 500
+  margin-right: 20px
   &:hover
     cursor: pointer
-    background-color: #eb9a9a
+    background-color: #91a4a8
+    box-shadow: none
   &--primary
-    background-color: #a9e0ee
+    background-color: $light
     color: #000000
     transition: box-shadow 0.3s
+  &:active, &:focus 
+    outline: none

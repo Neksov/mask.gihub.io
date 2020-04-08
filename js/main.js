@@ -1,18 +1,13 @@
 $(document).ready(function () {
   let modal = $(".modal"); //помещаем модальное окно
   let modal2 = $(".modalFoto"); //помещаем модальное окно
-  let modal3 = $(".modalAddress"); //помещаем модальное окно
 
 
   modalBtn = $("[data-toggle = modal]"); //
   modalBtnFoto = $("[data-toggle = modalFoto]"); //
-  modalBtnAddress = $("[data-toggle = modalAddress]"); //
-
 
   closeBtn = $(".modal__close"); //
   closeBtnFoto = $(".modalFoto__close"); //
-  closeBtnAddress = $(".modalAddress__close"); //
-
 
 
   modalBtn.on("click", function () {
@@ -61,29 +56,7 @@ $(document).ready(function () {
   });
   ///закрытие модалтного окна Фото
 
-  //открытие модального окна Адресс 
-  modalBtnAddress.on("click", function () {
-    //присваееваем класс
-    modal3.toggleClass("modalAddress--visible");
-  });
 
-  closeBtnAddress.on("click", function () {
-    //присваееваем класс
-    modal3.toggleClass("modalAddress--visible");
-  });
-  //закрытие по esc
-  $(document).keyup("click", function (event) {
-    if (event.which == "27") {
-      $(".modalAddress").removeClass("modalAddress--visible");
-    }
-  });
-  // закрытие по клику вне окна
-  $(document).click(function (e) {
-    if ($(e.target).is(".modalAddress")) {
-      modal3.toggleClass("modalAddress--visible");
-    }
-  });
-  ///закрытие модального окна Адресс
 
 
 
@@ -101,6 +74,20 @@ $(document).ready(function () {
   // закрытие по клику вне окна  ПОДПИСКИ
   $(document).on("click", function (e) {
     $(".modalSend").fadeOut();
+  });
+
+
+
+
+  //Слайдер 
+  var gallerySwiper = new Swiper('.slider-gallery', {
+    cssMode: true,
+    navigation: {
+      nextEl: '.slider-gallery__next',
+      prevEl: '.slider-gallery__prev',
+    },
+    mousewheel: true,
+    keyboard: true,
   });
 
   //валидация форм

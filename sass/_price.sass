@@ -1,6 +1,7 @@
 .price
   display: contents
   position: relative
+
   &__center 
     //padding-top: 96px 
   &__btn 
@@ -13,14 +14,15 @@
     display: flex
     flex-direction: row
 
+
   &-title 
     text-align: center
-    color: #2d2c2c
+    color: $light
     font-size: 30px
     font-weight: 500
-    line-height: 44px
+    line-height: 29px
   &__input 
-    color: #1e1e1e
+    color: $light
     font-size: 18px
     font-weight: normal
     line-height: 30px
@@ -31,9 +33,9 @@
       display: flex
       flex-direction: column
     &::placeholder 
-      color: #1e1e1e
+      color: rgba(250, 250, 250, 0.5)
   &__label 
-    color: $secondary
+    color: $light
     font-size: 18px
     font-weight: normal
     line-height: 18.72px

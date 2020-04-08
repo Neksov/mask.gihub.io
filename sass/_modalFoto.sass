@@ -18,11 +18,10 @@
     visibility: visible
   &__dialog
     position: relative
-    width: 23.1875rem
-    height: 14.4375rem
+    width: 25rem
+    height: 18rem
     background: $light 
     box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05)
-    padding: 2.5rem 3.1rem 1.928rem
   &__close
     position: absolute
     right: 0
@@ -33,6 +32,51 @@
     border: none
     margin: 12px
     cursor: pointer
+    z-index: 10
+    color: $light
+
+
   &__foto
-    width: 100px
-    height: 100px
+    width: 30rem
+    height: 20rem
+  .swiper
+    &__modalFoto 
+      position: relative
+      top: 24px
+      left: 24px
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      background-color: $primary
+      border-radius: 5px
+      color: $light
+      z-index: 5
+    &__swiper 
+      position: relative
+.slider-gallery__prev
+  background: url("../img/prev.svg")
+  background-repeat: no-repeat
+  background-position: center
+  width: 43px
+  height: 43px
+  color: $light
+  outline-style: none
+  &:hover
+    color: $primary
+
+    
+
+.slider-gallery__next
+  background: url("../img/next.svg")
+  background-repeat: no-repeat
+  background-position: center
+  width: 43px
+  height: 43px
+  color: $light
+  outline-style: none
+  &:hover
+    color: $primary
+
+svg use 
+  fill: currentColor

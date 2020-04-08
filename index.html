@@ -6,32 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/swiper.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="css/animate.min.css" media="all" />
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <title>Защитные маски</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(61766605, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/61766605" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
   <main>
     <div class="mask">
-      <img src="img/mask.jpg" alt="Маска" class="mask__images" />
-
       <div class="container">
         <div class="box">
           <div class="menu box__menu">
             <a href="index.html" class="logo wow fadeInLeft" data-wow-delay="0.4s"><img src="img/medicalmask.png"
                 class="logo box__menu-logo" alt="Logo" />
-              MedMaskSPB</a>
+              Маска</a>
             <nav class="nav menu__nav">
               <a href="#hero" class="nav__item" data-toggle="modalFoto">Фото</a>
-              <a href="#price" class="nav__item">Цены</a>
-              <a href="#footer" class="nav__item" data-toggle="modalAddress">Контакты</a>
             </nav>
             <!-- /.menu nav__menu -->
             <div class="contacts menu__contacts">
               <a href="tel:+78129921030" class="phone contacts__phone">+7(911)-983-31-12</a>
-              <button onclick="ym('61621897', 'reachGoal', 'button'); return true;"
+              <a href="https://www.instagram.com/_thepetsour/" target="_blank"><img src="img/inst.png" alt="Инстаграм"
+                  class="phone contacts__img2"></a>
+              <a href="https://vk.com/thepetsour" target="_blank"><img src="img/vk.png" alt="Вконтакте"
+                  class="phone contacts__img"></a>
+              <button onclick="ym('61766605', 'reachGoal', 'button'); return true;"
                 class="btn contacts__btn btn--primary wow bounce" data-toggle="modal">
                 Заказать звонок
               </button>
@@ -43,8 +66,8 @@
     <section class="price">
       <div class="container">
         <div class="price__half">
-          <div class="price__info">
-            <h2 class="price-title" id="price">Заказать защитные маски</h2>
+          <div class="price__info wow fadeInLeft" data-wow-delay="0.4s">
+            <h2 class="price-title" id="price">Заказать защитную, <br>многоразовую маску</h2>
             <form action="sendPrice.php" method="POST" class="form price__form">
               <div class="input-group price__input-group">
                 <label for="price-user-name" class="label form__label price__label">ИМЯ</label>
@@ -69,8 +92,8 @@
                   id="price-user-message" placeholder="Введите Ваше сообщение" maxlength="30" />
               </div>
 
-              <button onclick="ym('61621897', 'reachGoal', 'button'); return true;" class="btn btn--primary price__btn">
-                Узнать стоимость
+              <button onclick="ym('61766605', 'reachGoal', 'button'); return true;" class="btn btn--primary price__btn">
+                Оставить заявку
               </button>
             </form>
           </div>
@@ -100,28 +123,44 @@
     </div>
   </div>
 
-
   <div class="modalFoto">
     <div class="modalFoto__dialog">
       <button class="modalFoto__close"></button>
-      <img src="img/mask1.jpg" alt="" class="modalFoto__foto">
-      <!-- /.form modal__form -->
-    </div>
-  </div>
-
-
-  <div class="modalAddress">
-    <div class="modalAddress__dialog">
-      <button class="modalAddress__close"></button>
-      <div class="modalAddress__title">
-        <h3>город Санкт-Петербург</h3>
-        <span>ул. Белышева 5/6</span>
+      <div
+        class="swiper-container modalFoto__swiper swiper-container-initialized swiper-container-horizontal slider-gallery">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper swiper-no-swiping" style="transform: translate3d(0px, 0px, 0px);">
+          <!-- Slides -->
+          <div class="swiper-slide swiper-slide-active" style="width: 400px;">
+            <div class="swiper__modalFoto__swiper">
+              <img data-src="img/img1.jpg" src="a" alt="news" class="swiper__image" />
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-next" style="width: 400px;">
+            <div class="swiper__modalFoto__swiper">
+              <img data-src="img/img2.jpg" src="f" alt="news" class="swiper__image" />
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-next" style="width: 400px;">
+            <div class="swiper__modalFoto__swiper">
+              <img data-src="img/img3.jpg" src="f" alt="news" class="swiper__image" />
+            </div>
+          </div>
+          <div class="swiper-slide" style="width: 400px;">
+            <div class="swiper__modalFoto__swiper">
+              <img data-src="img/img4.jpg" src="a" alt="news" class="swiper__image" />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- /.form modal__form -->
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-next slider-gallery__next" tabindex="0" role="button" aria-label="Next slide"
+        aria-disabled="false"></div>
+      <div class="swiper-button-prev slider-gallery__prev" tabindex="0" role="button" aria-label="Previous slide"
+        aria-disabled="false"></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
   </div>
-
 
   <!-- Модальне окно благодарности -->
   <div class="modalSend">
@@ -129,7 +168,7 @@
       <div class="modalSend__content">
         <h3 class="modalSend__header">
           Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
-          минут. <br />
+          минут. </h3>
       </div>
     </div>
   </div>
