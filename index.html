@@ -70,9 +70,9 @@
             <h2 class="price-title" id="price">Заказать защитную, <br>многоразовую маску</h2>
             <form action="sendPrice.php" method="POST" class="form price__form">
               <div class="input-group price__input-group">
-                <label for="price-user-name" class="label form__label price__label">ИМЯ</label>
+                <label for="price-user-name" class="label form__label price__label">ФИО</label>
                 <input type="text" autocomplete="off" name="userName" class="input form__input price__input"
-                  id="price-user-name" placeholder="Иван Иванов" maxlength="15" />
+                  id="price-user-name" placeholder="Иванов Иван Иванович" maxlength="30" />
               </div>
               <div class="input-group price__input-group">
                 <label for="price-user-email" class="label form__label price__label">E-MAIL</label>
@@ -89,7 +89,7 @@
               <div class="input-group price__input-group">
                 <label for="price-user-message" class="label form__label price__label">СООБЩЕНИЕ</label>
                 <input type="text" autocomplete="off" name="userMessage" class="input form__input price__input"
-                  id="price-user-message" placeholder="Введите Ваше сообщение" maxlength="30" />
+                  id="price-user-message" placeholder="Введите Ваше сообщение" maxlength="50" />
               </div>
 
               <button onclick="ym('61766605', 'reachGoal', 'button'); return true;" class="btn btn--primary price__btn">
@@ -165,11 +165,11 @@
   <!-- Модальне окно благодарности -->
   <div class="modalSend">
     <div class="modalSend__dialog">
-      <div class="modalSend__content">
-        <h3 class="modalSend__header">
-          Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
-          минут. </h3>
-      </div>
+      <button class="modalSend__close"></button>
+
+      <h3 class="modalSend__header">
+        Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
+        минут.</h3>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

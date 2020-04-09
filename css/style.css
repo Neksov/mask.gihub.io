@@ -490,7 +490,7 @@ button:hover {
     color: #ffffff;
     font-size: 30px;
     font-weight: 500;
-    line-height: 29px; }
+    line-height: 35px; }
   .price__input {
     color: #ffffff;
     font-size: 18px;
@@ -612,7 +612,13 @@ button:hover {
     padding: 13px 53px;
     bottom: 0;
     margin-bottom: 26px;
-    margin-left: -2.7rem; }
+    margin-left: -2.7rem;
+    background-color: #91a4a8;
+    color: #ffffff;
+    -webkit-transition: -webkit-box-shadow 0.3s;
+    transition: -webkit-box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
   .modal__close {
     position: absolute;
     right: 0;
@@ -633,31 +639,64 @@ button:hover {
   margin-top: 38px; }
 
 .modalSend {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
-  left: 50%;
-  top: 30%;
-  background-color: #ffffff;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  padding: 4rem 6rem;
-  background: #ffffff url(../img/bg-lines.svg) no-repeat center/140%;
-  color: #38393b;
-  max-width: 36rem;
-  max-height: 36rem;
-  -webkit-box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05);
-  box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05); }
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .modalSend--visible {
+    opacity: 1;
+    visibility: visible; }
   .modalSend__dialog {
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 2rem; }
+    position: relative;
+    width: 23.1875rem;
+    height: 14.4375rem;
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05);
+    box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05);
+    padding: 2.5rem 3.1rem 1.928rem; }
+  .modalSend__btn {
+    position: absolute;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 13px 53px;
+    bottom: 0;
+    margin-bottom: 26px;
+    margin-left: -2.7rem;
+    background-color: #91a4a8;
+    color: #ffffff;
+    -webkit-transition: -webkit-box-shadow 0.3s;
+    transition: -webkit-box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
+  .modalSend__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url(../img/close.svg) no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
   .modalSend__header {
-    font-size: 15px; }
-  .modalSend a {
-    text-decoration: none;
-    color: #38393b;
-    font-size: 25px; }
+    text-align: center;
+    line-height: 2rem; }
 
 .modalFoto {
   opacity: 0;
@@ -694,8 +733,8 @@ button:hover {
     position: absolute;
     right: 0;
     top: 0;
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     background: transparent url(../img/close.svg) no-repeat center;
     border: none;
     margin: 12px;
@@ -782,3 +821,7 @@ svg use {
   .price__btn {
     margin-left: 0;
     margin-bottom: 30px; } }
+
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .modalFoto__dialog {
+    max-width: 19rem; } }

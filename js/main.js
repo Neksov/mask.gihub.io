@@ -1,6 +1,8 @@
 $(document).ready(function () {
   let modal = $(".modal"); //помещаем модальное окно
   let modal2 = $(".modalFoto"); //помещаем модальное окно
+  let modal3 = $(".modalSend"); //помещаем модальное окно
+
 
 
   modalBtn = $("[data-toggle = modal]"); //
@@ -8,6 +10,8 @@ $(document).ready(function () {
 
   closeBtn = $(".modal__close"); //
   closeBtnFoto = $(".modalFoto__close"); //
+  closeBtnSend = $(".modalSend__close"); //
+
 
 
   modalBtn.on("click", function () {
@@ -75,7 +79,10 @@ $(document).ready(function () {
   $(document).on("click", function (e) {
     $(".modalSend").fadeOut();
   });
-
+  closeBtnSend.on("click", function () {
+    //присваееваем класс
+    modal3.toggleClass("modalSend--visible");
+  });
 
 
 
@@ -98,12 +105,12 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 30
       },
       userMessage: {
         required: true,
         minlength: 10,
-        maxlength: 30
+        maxlength: 50
       },
       // правило- обьект
       userEmail: {
@@ -160,7 +167,7 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 30
       },
       userPhone: {
         required: !0,
