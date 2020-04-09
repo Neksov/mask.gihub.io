@@ -9,31 +9,43 @@
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="css/animate.min.css" media="all" />
   <title>Защитные маски</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
   <!-- Yandex.Metrika counter -->
   <script>
     (function (m, e, t, r, i, k, a) {
-      m[i] = m[i] || function () {
-        (m[i].a = m[i].a || []).push(arguments)
-      };
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
       m[i].l = 1 * new Date();
-      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
-        a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      (k = e.createElement(t)),
+      (a = e.getElementsByTagName(t)[0]),
+      (k.async = 1),
+      (k.src = r),
+      a.parentNode.insertBefore(k, a);
+    })(
+      window,
+      document,
+      "script",
+      "https://mc.yandex.ru/metrika/tag.js",
+      "ym"
+    );
 
     ym(61766605, "init", {
       clickmap: true,
       trackLinks: true,
-      accurateTrackBounce: true
+      accurateTrackBounce: true,
     });
   </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/61766605" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div>
+      <img src="https://mc.yandex.ru/watch/61766605" style="position: absolute; left: -9999px;" alt="" />
+    </div>
   </noscript>
   <!-- /Yandex.Metrika counter -->
   <main>
@@ -51,9 +63,11 @@
             <div class="contacts menu__contacts">
               <a href="tel:+78129921030" class="phone contacts__phone">+7(911)-983-31-12</a>
               <a href="https://www.instagram.com/_thepetsour/" target="_blank"><img src="img/inst.png" alt="Инстаграм"
-                  class="phone contacts__img2"></a>
+                  class="phone contacts__img2" /></a>
+
               <a href="https://vk.com/thepetsour" target="_blank"><img src="img/vk.png" alt="Вконтакте"
-                  class="phone contacts__img"></a>
+                  class="phone contacts__img" /></a>
+
               <button onclick="ym('61766605', 'reachGoal', 'button'); return true;"
                 class="btn contacts__btn btn--primary wow bounce" data-toggle="modal">
                 Заказать звонок
@@ -67,7 +81,9 @@
       <div class="container">
         <div class="price__half">
           <div class="price__info wow fadeInLeft" data-wow-delay="0.4s">
-            <h2 class="price-title" id="price">Заказать защитную, <br>многоразовую маску</h2>
+            <h2 class="price-title" id="price">
+              Заказать защитную, <br />многоразовую маску
+            </h2>
             <form action="sendPrice.php" method="POST" class="form price__form">
               <div class="input-group price__input-group">
                 <label for="price-user-name" class="label form__label price__label">ФИО</label>
@@ -167,9 +183,12 @@
     <div class="modalSend__dialog">
       <button class="modalSend__close"></button>
 
-      <h3 class="modalSend__header">
-        Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
-        минут.</h3>
+      <div class="modalSend__content">
+        <h3 class="modalSend__header">
+          Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
+          минут. <br />
+        </h3>
+      </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

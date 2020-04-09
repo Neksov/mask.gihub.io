@@ -1,49 +1,42 @@
 .modalSend
-  opacity: 0
-  visibility: hidden
+  display: none
   position: fixed
   z-index: 199
   left: 0
   top: 0
   bottom: 0
   right: 0
-  width: 100% //от родительского блока body 
-  height: 100%
-  background-color: rgba($light ,0.6 ) //прозрачность 60%
-  display: flex
-  align-items: center
-  justify-content: center
-  &--visible
-    opacity: 1
-    visibility: visible
+  background-color: $light
+  background: $light 
+  color: $black
+  width: 21rem
+  height: 18rem
+  box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05)
+  margin: auto
   &__dialog
-    position: relative
-    width: 23.1875rem
-    height: 14.4375rem
-    background: $light 
-    box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05)
-    padding: 2.5rem 3.1rem 1.928rem
- 
-  &__btn
-    position: absolute
-    align-self: flex-end
-    padding: 13px 53px
-    bottom: 0
-    margin-bottom: 26px
-    margin-left: -2.7rem
-    background-color: #91a4a8
-    color: $light
-    transition: box-shadow 0.3s
+    text-align: center
+    font-family: 'Ubuntu', sans-serif
+    line-height: 2rem
+    padding: 5rem 2rem
+
+
   &__close
     position: absolute
     right: 0
     top: 0
-    width: 28px
-    height: 28px
+    width: 25px
+    height: 25px
     background: transparent url(../img/close.svg) no-repeat center
     border: none
     margin: 12px
     cursor: pointer
+    z-index: 10
+    color: $light
+
   &__header
-    text-align: center
-    line-height: 2rem
+    font-size: 18px
+
+ 
+
+
+  

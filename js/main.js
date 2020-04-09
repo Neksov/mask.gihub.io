@@ -1,12 +1,12 @@
 $(document).ready(function () {
   let modal = $(".modal"); //помещаем модальное окно
   let modal2 = $(".modalFoto"); //помещаем модальное окно
-  let modal3 = $(".modalSend"); //помещаем модальное окно
 
 
 
   modalBtn = $("[data-toggle = modal]"); //
   modalBtnFoto = $("[data-toggle = modalFoto]"); //
+
 
   closeBtn = $(".modal__close"); //
   closeBtnFoto = $(".modalFoto__close"); //
@@ -154,6 +154,7 @@ $(document).ready(function () {
           //modal.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           modal.removeClass("modal--visible");
+          $(".modal").fadeOut();
           $(".modalSend").fadeIn();
         }
       });
